@@ -7,3 +7,9 @@ hello world
 	<%= number %> 
 	<br />
 <% end %>
+
+<% Story.all.each do |story| %>
+	<%= story.to_json %>
+	<hr />
+	
+<% end %>
