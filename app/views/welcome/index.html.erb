@@ -1,15 +1,8 @@
-hello world 
-<h1>
-	something
-</h1>
-
-<% [1, 2, 3, 4].each do |number| %>
-	<%= number %> 
-	<br />
-<% end %>
-
-<% Story.all.each do |story| %>
-	<%= story.to_json %>
-	<hr />
-	
-<% end %>
+<div class="row">
+	<div class="small-6 columns"> <!--   -->
+		<%= link_to('Stories', stories_path, class: :button ) %>
+	</div>
+	<div class="small-6 columns">
+		right side
+	</div>
+</div>
