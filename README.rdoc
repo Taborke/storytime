@@ -1,28 +1,14 @@
-== README
+StoryTime
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+a web based application where users can contribute to stories in paragraph snippits. The stories will be displayed for other users to contribute to and edit as they choose.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+an application where users who collectively write a story with an addition of one page per day.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Features:
+User Login
+One story
+voting upvote/downvote to be included
+
+Users that are upvoted can create their own story
+and through alerts other users will 

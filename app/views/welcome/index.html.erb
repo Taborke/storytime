@@ -3,6 +3,30 @@
 		<%= link_to('Stories', stories_path, class: :button ) %>
 	</div>
 	<div class="small-6 columns">
-		right side
+		<%= @story.title %>
+	</div>
+</div>
+<div class='row'>
+	<div class='small-12 columns'>
+		<ul class="small-block-grid-2">
+			<% @story.pages.each do |page| %>
+				<li>
+					<div class="panel">
+						<p>
+							<%= page.content %>
+						</p>
+					</div>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+<div class='row'>
+	<div class="small-12 columns">
+		<%= form_for([@story, @page]) do |f| %>
+			<%= f.label(:content) %>
+			<%= f.text_area(:content) %>
+			<%= f.submit('Add Page', class: :button) %>
+		<% end %>
 	</div>
 </div>
