@@ -1,4 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class='row'>
+	<div class='small-12 columns'>
+		<h1><%= @story.title %></h1>
+	</div>
+</div>
 
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+<div class='row'>
+	<div class='small-12 columns'>
+		<ul class='small-block-grid-2'>
+			<% @story.pages.each do |page| %>
+				<li>
+					<div class='panel'>
+						<p>
+							<%= page.content %>
+						</p>
+					</div>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+
+<div class='row'>
+	<div class='small-12 columns'>
+		<%= link_to('New Page', new_story_page_path(@story), class: :button ) %>
+		<%= link_to 'Edit', edit_story_path(@story), class: :button %>
+		<%= link_to 'Back', stories_path, class: :button  %>
+	</div>
+</div>

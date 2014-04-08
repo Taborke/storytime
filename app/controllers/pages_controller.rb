@@ -14,6 +14,7 @@ class PagesController < ApplicationController
 
   # GET /pages/new
   def new
+    @story = Story.find(params[:story_id])
     @page = Page.new
   end
 
@@ -31,7 +32,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to [@story, @page], notice: 'Page was successfully created.' }
+        format.html { redirect_to @story, notice: 'Page was successfully created.' }
         format.json { render action: 'show', status: :created, location: @page }
       else
         format.html { render action: 'new' }
