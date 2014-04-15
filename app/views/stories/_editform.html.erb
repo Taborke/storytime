@@ -1,0 +1,23 @@
+<%= form_for(@story) do |f| %>
+
+	<%= f.label(:title, "#{@story[:title]}") %>
+	<%= f.text_field(:title) %>
+	<div class='small-12 columns'>
+		<ul class='small-block-grid-2'>
+			<% @story.pages.each do |page| %>
+				<li>
+					<div class='panel'>
+						<p>
+							<%= page[:content] %>
+						</p>
+						
+					</div>
+				</li>
+			<% end %>
+		</ul>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
+
+

@@ -9,11 +9,12 @@
 		<ul class='small-block-grid-2'>
 			<% @story.pages.each do |page| %>
 				<li>
-					<div class='panel'>
-						<p>
-							<%= page.content %>
-						</p>
-					</div>
+						<%= link_to 'Edit', edit_story_page_path(:id => page, :story_id => @story ) %>
+						<div class='panel'>
+							<p>
+								<%= page.content %>
+							</p>
+						</div>
 				</li>
 			<% end %>
 		</ul>

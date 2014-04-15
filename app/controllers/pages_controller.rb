@@ -20,6 +20,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
+      @page
   end
 
   # POST /pages
