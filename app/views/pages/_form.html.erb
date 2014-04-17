@@ -1,9 +1,5 @@
 <%= form_for([@story, @page]) do |f| %>
-  <div class='row'>
-    <div class='small-12 columns'>
       <%= f.label(:content) %>
       <%= f.text_area(:content) %>
       <%= f.submit class: :button %>
-    </div>
-  </div>
 <% end %>

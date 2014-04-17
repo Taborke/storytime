@@ -1,12 +1,7 @@
-<%= form_for(@story) do |f| %>
 
   <%= f.label(:title, 'What is our story called?') %>
   <%= f.text_field(:title) %>
-
-  <%= f.label(:content, 'What is your story?') %>
-  <%= f.text_area(:content) %>
   
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
